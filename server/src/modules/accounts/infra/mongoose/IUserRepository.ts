@@ -7,7 +7,7 @@ interface IUserDTO {
   name: string;
   email: string;
   password: string;
-  tasks?: string[];
+  tasks?: ObjectId[];
 }
 
 interface IFindUserDTO {
@@ -18,7 +18,7 @@ interface IFindUserDTO {
 interface IUsersRepository {
   create(data: IUserDTO): Promise<IUser>;
   findByEmail(email: string): Promise<IUser>;
-  findById(data: IFindUserDTO): Promise<IUser>;
+  findById(data: IFindUserDTO): Promise<any>;
   updateData(data: IUserDTO): Promise<IUser>;
 }
 

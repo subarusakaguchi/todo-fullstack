@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   },
   tasks: [
     {
-      type: String,
+      type: Schema.Types.ObjectId,
     },
   ],
   created_at: {

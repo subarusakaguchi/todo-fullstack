@@ -7,7 +7,7 @@ interface IUser {
   name: string;
   email: string;
   password: string;
-  tasks: string[];
+  tasks: ObjectId[];
 }
 
 const User = mongoose.model<IUser>("User", UserSchema);

@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { inject, injectable } from "tsyringe";
 
 import { IUsersRepository } from "../../../accounts/infra/mongoose/IUserRepository";
@@ -25,9 +26,8 @@ class CreateTaskUseCase {
     });
 
     const newTask = await this.tasksRepository.create({ title, description });
-
     // eslint-disable-next-line no-underscore-dangle
-    user.tasks = [...user.tasks, newTask._id.toString()];
+    user.tasks = [...user.tasks, newTask._id];
 
     await this.usersRepository.updateData(user);
 

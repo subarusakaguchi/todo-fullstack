@@ -1,9 +1,9 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 
 import { TaskSchema } from "./schemas/TaskSchema";
 
 interface ITask {
-  _id: string;
+  _id: ObjectId;
   title: string;
   description: string;
   isCompleted: boolean;

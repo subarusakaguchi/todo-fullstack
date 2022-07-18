@@ -1,10 +1,10 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 
 import { TokenSchema } from "./schemas/TokenSchema";
 
 interface IToken {
   token: string;
-  user_id: string;
+  user_id: ObjectId;
   expires_date: Date;
 }
 

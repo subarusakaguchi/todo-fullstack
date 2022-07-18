@@ -8,13 +8,13 @@ class GetAllTasksUseCase {
     @inject("UsersRepository")
     private usersRepository: IUsersRepository
   ) {}
-  async execute(user_id: string): Promise<void> {
+  async execute(user_id: string): Promise<any> {
     const userWithTasks = await this.usersRepository.findById({
       user_id,
       with_tasks: true,
     });
 
-    // return userWithTasks;
+    return userWithTasks;
   }
 }
 
