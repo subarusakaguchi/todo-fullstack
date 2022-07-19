@@ -20,6 +20,7 @@ interface IResponse {
     email: string;
   };
   token: string;
+  tokenId: string;
 }
 
 @injectable()
@@ -54,7 +55,7 @@ class AuthenticateUserUseCase {
 
     const expires_date = this.dateProvider.addDays(expires_token_days);
 
-    await this.tokensRepository.create({
+    const tokenSaved = await this.tokensRepository.create({
       token,
       user_id: userExists._id,
       expires_date,
@@ -66,6 +67,7 @@ class AuthenticateUserUseCase {
         email: userExists.email,
       },
       token,
+      tokenId: tokenSaved._id.toString(),
     };
 
     return tokenReturn;

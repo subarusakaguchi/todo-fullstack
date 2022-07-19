@@ -14,7 +14,7 @@ class GetAllTasksUseCase {
       with_tasks: true,
     });
 
-    return userWithTasks;
+    return userWithTasks[0];
   }
 }
 

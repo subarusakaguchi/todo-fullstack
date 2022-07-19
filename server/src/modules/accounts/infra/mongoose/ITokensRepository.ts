@@ -10,7 +10,7 @@ interface ITokenDTO {
 
 interface ITokensRepository {
   create(data: ITokenDTO): Promise<IToken>;
-  findByToken(token: string): Promise<IToken>;
+  findById(token: string): Promise<IToken>;
   deleteById(id: string): Promise<void>;
 }
 

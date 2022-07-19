@@ -6,7 +6,7 @@ import { usersRoutes } from "./users.routes";
 
 const routes = Router();
 
-routes.use(authenticateRoutes);
+routes.use("/session", authenticateRoutes);
 routes.use("/tasks", tasksRoutes);
 routes.use("/users", usersRoutes);
 

@@ -63,7 +63,9 @@ class UsersRepository implements IUsersRepository {
       return user;
     }
 
-    const user = await User.findOne({ _id: user_id });
+    const user = await User.findOne({
+      _id: new mongoose.Types.ObjectId(user_id),
+    });
 
     return user;
   }
