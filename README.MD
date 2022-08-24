@@ -10,6 +10,8 @@ Não foram utilizados testes de integração e unitários, isto por não ter sid
 
 # A Aplicação
 
+![image](https://user-images.githubusercontent.com/50173813/186446463-baf5c254-9b8b-493c-80c1-c6a1e824b4d6.png)
+
 A aplicação funciona com um sistema de contas, na qual é possível criar as mesmas de forma simples em uma tela, e logar em outra, o sistema recebe uma JWT que é registrada em localstorage para evitar que limpeza de cash deslogue o usuário, após entrar no sistema, a mesma gera uma tela na qual pode-se adicionar as tarefas, é possível clicar para concluir as mesmas ou apaga-las, cada "todo" é associada com uma única conta e salva no banco de dados
 
 # Arquitetura
